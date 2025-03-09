@@ -51,5 +51,13 @@ public void testNullDnaSequence() {
 
     assertEquals("Error: DNA sequence cannot be null or empty.", exception.getMessage());
 }
+@Test
+public void testSingleTypeDnaSequence() {
+    String dnaSequence = "AAAA"; // Secuencia de solo adeninas
+    String expectedRnaSequence = "UUUU"; // Se transcribe a uracilos
+    String result = RnaTranscription.dnaToRna(dnaSequence);
+    
+    assertEquals(expectedRnaSequence, result);
+}
 
 }
