@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="rnatranscription.RnaTranscriptionTest" time="0.016" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="rnatranscription.RnaTranscriptionTest" time="0.021" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="ES"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
-    <property name="sun.java.command" value="C:\Users\User\AppData\Local\Temp\surefire7166182948780744801\surefirebooter17453482410777787481.jar C:\Users\User\AppData\Local\Temp\surefire7166182948780744801 2025-03-09T20-06-41_884-jvmRun1 surefire9003374325453101468tmp surefire_08926895172472305562tmp"/>
+    <property name="sun.java.command" value="C:\Users\User\AppData\Local\Temp\surefire1345296667924969614\surefirebooter4996219005495642620.jar C:\Users\User\AppData\Local\Temp\surefire1345296667924969614 2025-03-09T20-07-57_559-jvmRun1 surefire549938206438382603tmp surefire_01227701790300984108tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\User\Desktop\Factoria F5\RNA-transcription\rnatranscription\target\test-classes;C:\Users\User\Desktop\Factoria F5\RNA-transcription\rnatranscription\target\classes;C:\Users\User\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.0\junit-jupiter-api-5.6.0.jar;C:\Users\User\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\User\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\User\.m2\repository\org\junit\platform\junit-platform-commons\1.6.0\junit-platform-commons-1.6.0.jar;C:\Users\User\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.0\junit-jupiter-engine-5.6.0.jar;C:\Users\User\.m2\repository\org\junit\platform\junit-platform-engine\1.6.0\junit-platform-engine-1.6.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\User\AppData\Local\Temp\surefire7166182948780744801\surefirebooter17453482410777787481.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\User\AppData\Local\Temp\surefire1345296667924969614\surefirebooter4996219005495642620.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.5+9-LTS-239"/>
@@ -58,7 +58,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testEmptyDnaSequence" classname="rnatranscription.RnaTranscriptionTest" time="0.012">
+  <testcase name="testInvalidNucleotideThrowsException" classname="rnatranscription.RnaTranscriptionTest" time="0.016">
     <system-err><![CDATA[java.lang.instrument.IllegalClassFormatException: Error while instrumenting rnatranscription/RnaTranscription.
 	at org.jacoco.agent.rt.internal_035b120.CoverageTransformer.transform(CoverageTransformer.java:93)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:244)
@@ -73,7 +73,11 @@
 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:639)
 	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
-	at rnatranscription.RnaTranscriptionTest.testEmptyDnaSequence(RnaTranscriptionTest.java:21)
+	at rnatranscription.RnaTranscriptionTest.lambda$0(RnaTranscriptionTest.java:29)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:55)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:37)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:2952)
+	at rnatranscription.RnaTranscriptionTest.testInvalidNucleotideThrowsException(RnaTranscriptionTest.java:28)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:686)
@@ -142,7 +146,7 @@ Caused by: java.io.IOException: Error while instrumenting rnatranscription/RnaTr
 	at org.jacoco.agent.rt.internal_035b120.core.instr.Instrumenter.instrumentError(Instrumenter.java:158)
 	at org.jacoco.agent.rt.internal_035b120.core.instr.Instrumenter.instrument(Instrumenter.java:108)
 	at org.jacoco.agent.rt.internal_035b120.CoverageTransformer.transform(CoverageTransformer.java:91)
-	... 77 more
+	... 81 more
 Caused by: java.lang.IllegalArgumentException: Unsupported class file major version 65
 	at org.jacoco.agent.rt.internal_035b120.asm.ClassReader.<init>(ClassReader.java:195)
 	at org.jacoco.agent.rt.internal_035b120.asm.ClassReader.<init>(ClassReader.java:176)
@@ -150,8 +154,9 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	at org.jacoco.agent.rt.internal_035b120.core.internal.instr.InstrSupport.classReaderFor(InstrSupport.java:279)
 	at org.jacoco.agent.rt.internal_035b120.core.instr.Instrumenter.instrument(Instrumenter.java:74)
 	at org.jacoco.agent.rt.internal_035b120.core.instr.Instrumenter.instrument(Instrumenter.java:106)
-	... 78 more
+	... 82 more
 ]]></system-err>
   </testcase>
+  <testcase name="testEmptyDnaSequence" classname="rnatranscription.RnaTranscriptionTest" time="0.001"/>
   <testcase name="testDnaToRnaConversion" classname="rnatranscription.RnaTranscriptionTest" time="0.001"/>
 </testsuite>

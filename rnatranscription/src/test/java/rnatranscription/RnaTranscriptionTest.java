@@ -1,8 +1,7 @@
 package rnatranscription;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
-
+import static org.junit.jupiter.api.Assertions.*;
 public class RnaTranscriptionTest {
 
     @Test
@@ -23,4 +22,13 @@ public class RnaTranscriptionTest {
         assertEquals(expectedRnaSequence, result);
     }
 
+      @Test
+    public void testInvalidNucleotideThrowsException() {
+        String invalidDna = "GXTA"; // 'X' no es un nucleótido válido
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+            RnaTranscription.dnaToRna(invalidDna);
+        });
+
+        assertEquals("Invalid DNA nucleotide: X", exception.getMessage());
+    }
 }
