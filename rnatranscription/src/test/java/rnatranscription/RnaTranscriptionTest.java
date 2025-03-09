@@ -10,7 +10,17 @@ public class RnaTranscriptionTest {
         String dnaSequence = "GCTA";
         String expectedRnaSequence = "CGAU";
         String result = RnaTranscription.dnaToRna(dnaSequence);
-        
+
         assertEquals(expectedRnaSequence, result);
     }
+
+    @Test
+    public void testEmptyDnaSequence() {
+        String dnaSequence = "";
+        String expectedRnaSequence = "";
+        String result = RnaTranscription.dnaToRna(dnaSequence);
+
+        assertEquals(expectedRnaSequence, result);
+    }
+
 }
