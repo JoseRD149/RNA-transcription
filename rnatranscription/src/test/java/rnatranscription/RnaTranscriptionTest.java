@@ -53,8 +53,8 @@ public void testNullDnaSequence() {
 }
 @Test
 public void testSingleTypeDnaSequence() {
-    String dnaSequence = "AAAA"; // Secuencia de solo adeninas
-    String expectedRnaSequence = "UUUU"; // Se transcribe a uracilos
+    String dnaSequence = "AAAA";
+    String expectedRnaSequence = "UUUU"; 
     String result = RnaTranscription.dnaToRna(dnaSequence);
     
     assertEquals(expectedRnaSequence, result);
