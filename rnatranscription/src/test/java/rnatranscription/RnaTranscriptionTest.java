@@ -42,5 +42,14 @@ public void testLongDnaSequence() {
 
     assertEquals(expectedRnaSequence, result);
 }
+@Test
+public void testNullDnaSequence() {
+    IllegalArgumentException exception = assertThrows(
+        IllegalArgumentException.class,
+        () -> RnaTranscription.dnaToRna(null)
+    );
+
+    assertEquals("Error: DNA sequence cannot be null or empty.", exception.getMessage());
+}
 
 }
