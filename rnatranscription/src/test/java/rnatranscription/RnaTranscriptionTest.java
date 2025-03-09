@@ -15,12 +15,13 @@ public class RnaTranscriptionTest {
 
     @Test
     public void testEmptyDnaSequence() {
-        String dnaSequence = "";
-        String expectedRnaSequence = "";
-        String result = RnaTranscription.dnaToRna(dnaSequence);
+        IllegalArgumentException exception = assertThrows(
+        IllegalArgumentException.class,
+        () -> RnaTranscription.dnaToRna("")
+    );
 
-        assertEquals(expectedRnaSequence, result);
-    }
+    assertEquals("Error: DNA sequence cannot be null or empty.", exception.getMessage());
+}
 
       @Test
     public void testInvalidNucleotideThrowsException() {

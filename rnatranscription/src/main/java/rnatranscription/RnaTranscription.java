@@ -10,6 +10,10 @@ public class RnaTranscription {
     );
 
     public static String dnaToRna(String dnaSequence) {
+        if (dnaSequence == null || dnaSequence.isEmpty()) {
+            throw new IllegalArgumentException("Error: DNA sequence cannot be null or empty.");
+        }
+
         StringBuilder rnaSequence = new StringBuilder();
 
         for (char nucleotide : dnaSequence.toCharArray()) {
